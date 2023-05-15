@@ -1,0 +1,45 @@
+:root {
+  // colors
+
+  --white: #ffffff;
+
+  --dark: #414141;
+
+  --normal-primary-yellow:#FFAE45;
+  --normal-secondary-yellow: #E88300;
+  --hover-yellow: #FFA42E;
+  --disabled-yellow: #FFD8A5;
+  --disabled-yellow-secondary: #FFB85C;
+
+  --normal-primary-gray: #F5F5F5;
+  --normal-secondary-gray: #E9E9E9;
+  --gray-border: #BFBFBF;
+  --gray-border-secondary: #D4D4D4;
+  --gray-disabled: #F9F9F9;
+  --gray-timestamp: #6B6B6B;
+
+
+  
+
+
+  // linear-gradients
+  --primary-normal-gradient: linear-gradient(180deg, var(--normal-primary-yellow) 0%, var(--normal-secondary-yellow) 100%);
+  --primary-active-gradient: linear-gradient(180deg, var(--normal-secondary-yellow) 0%, var(--normal-primary-yellow) 100%);
+
+
+  --secondary-normal-gradient: linear-gradient(180deg, var(--normal-primary-gray) 0%, var(--normal-secondary-gray) 100%);
+  --secondary-active-gradient: linear-gradient(180deg, var(--normal-secondary-gray) 0%, var(--normal-primary-gray) 100%);
+  // --secoonda
+
+
+
+ 
+  // font - sizes 
+  --small: 12px;
+  --medium: 14px;
+
+  // border - radius 
+  --radius: 4px;
+
+}
+

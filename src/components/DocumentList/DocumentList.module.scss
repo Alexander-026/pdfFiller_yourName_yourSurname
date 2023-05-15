@@ -1,0 +1,40 @@
+@import "../../styles/mixins.scss";
+.list {
+  width: 100%;
+  padding: 20px 0;
+  &Item {
+    padding: 17px 24px;
+    min-height: 80px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-border-secondary);
+    border-top: none;
+    &:first-child {
+      border-top: 1px solid var(--gray-border-secondary);
+    }
+    @include flexbox(flex, space-between, center);
+    gap: 20px;
+    flex-wrap: wrap;
+    &File {
+      @include flexbox(flex, flex-start, center);
+      flex-direction: row;
+      gap: 12px;
+      flex: 1;
+      &SVG {
+        width: 34px;
+      }
+    }
+
+    &Name {
+      font-weight: 700;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: var(--dark);
+      min-width: 100%;
+      max-width: 226px;
+    }
+    &Timestamp {
+      color: var(--gray-timestamp);
+    }
+  }
+}
