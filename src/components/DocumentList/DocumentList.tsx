@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC  } from "react";
 import { ReactComponent as FileSVG } from "../../assets/File.svg";
 import { FileData } from "../../models/fileData";
 import styles from "./DocumentList.module.scss";
@@ -9,6 +9,10 @@ type DocumentListProps = {
 };
 
 const DocumentList: FC<DocumentListProps> = ({ dataSource }) => {
+  const openPDF = (path:string) => {
+    window.open(path, '_blank')
+  };
+
   return (
     <ul className={styles.list}>
       {dataSource.map((item) => (
@@ -18,13 +22,17 @@ const DocumentList: FC<DocumentListProps> = ({ dataSource }) => {
               <FileSVG width={34} height={46} />
             </div>
             <div className={styles.listItemDescription}>
-              <p title={item.fileName} className={styles.listItemName}>{item.fileName}</p>
+              <p title={item.fileName} className={styles.listItemName}>
+                {item.fileName}
+              </p>
               <span className={styles.listItemTimestamp}>
                 Last Edited: {item.lastEdit}
               </span>
             </div>
           </div>
-          <Button variant="primary">View document</Button>
+          <Button onClick={() => openPDF(item.file)} disabled={!item.file} variant="primary">
+            View document
+          </Button>
         </li>
       ))}
     </ul>
