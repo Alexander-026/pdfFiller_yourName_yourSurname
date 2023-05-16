@@ -26,7 +26,8 @@
     background: var(--hover-yellow);
     box-shadow: 0px 0px 4px var(--normal-secondary-yellow);
   }
-  @media (hover: hover) {
+ 
+  @media (hover: none) {
     &:hover {
       background: var(--primary-normal-gradient);
     }
